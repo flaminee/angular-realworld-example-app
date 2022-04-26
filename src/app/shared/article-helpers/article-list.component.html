@@ -1,3 +1,23 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<BR>
+<div class="input-group">
+  <div class="form-outline">
+    <input  class="form-control"
+            id="form1"
+            type="search"
+            placeholder="Search"
+           [(ngModel)]="searchFilter">
+  </div>
+  <div >
+    <button
+      type="button" class="btn btn-primary" (click)="filter()" >
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+</div>
+<BR>
+
 <app-article-preview
   *ngFor="let article of results"
   [article]="article">
@@ -14,6 +34,9 @@
 </div>
 
 <nav [hidden]="loading || totalPages.length <= 1">
+
+
+
   <ul class="pagination">
 
     <li class="page-item"
